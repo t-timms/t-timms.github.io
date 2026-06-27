@@ -236,7 +236,7 @@
   <section class="about" id="about">
     <div class="wrap">
       <h2>About</h2>
-      <p>I build production LLM systems from the metal up — from quantized models running on Jetson edge hardware to multi-agent cloud deployments with tool-use, permission gating, and audit trails. Currently focused on MoE fine-tuning (ZAYA1-8B), Blackwell-native FP4 quantization (NVFP4), and SOTA agentic coding benchmarks.</p>
+      <p>I build production LLM systems from the metal up — from quantized models running on Jetson edge hardware to multi-agent cloud deployments with tool-use, permission gating, and audit trails. Currently focused on MoE fine-tuning, Blackwell-native FP4 quantization (NVFP4), and SOTA agentic coding benchmarks.</p>
     </div>
   </section>
 
@@ -248,10 +248,6 @@
         <div class="focus-card">
           <h3><a href="https://github.com/t-timms/llama.cpp-nvfp4">llama.cpp NVFP4</a></h3>
           <p>Blackwell-native FP4 quantization with MSE-optimal scales — first consumer NVFP4 tooling on RTX 5070 Ti. <a href="https://github.com/ggml-org/llama.cpp/pull/22897">PR #22897</a> awaiting upstream review.</p>
-        </div>
-        <div class="focus-card">
-          <h3>ZAYA1-8B Agentic Fine-Tuning</h3>
-          <p>Completing the post-training (SFT + GRPO) Zyphra left as a deliberate gap in the <a href="https://huggingface.co/Zyphra/ZAYA1-8B">ZAYA1-8B</a> tech report — 760M active params targeting 14B-class tool-calling.</p>
         </div>
       </div>
     </div>
@@ -328,7 +324,6 @@
       <ul class="oss">
         <li><b><a href="https://github.com/ggml-org/llama.cpp/pull/22897">llama.cpp #22897</a></b> — <span>NVFP4 default type mapping + per-tensor scale tensors + MSE-optimal correction.</span></li>
         <li><b><a href="https://github.com/ggml-org/llama.cpp/pull/22858">llama.cpp #22858</a></b> — <span>Missing <code>LLAMA_FTYPE_MOSTLY_NVFP4</code> case fix (closed, replaced by #22897).</span></li>
-        <li><b><a href="https://huggingface.co/Zyphra/ZAYA1-8B">Zyphra/ZAYA1-8B</a></b> — <span>Agentic fine-tuning to complete the model's post-training (SFT + GRPO).</span></li>
       </ul>
     </div>
   </section>
