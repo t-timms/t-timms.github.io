@@ -247,7 +247,7 @@
       <div class="focus-grid">
         <div class="focus-card">
           <h3><a href="https://github.com/t-timms/zaya1-godspeed">ZAYA1 NVFP4 W4A4 on Blackwell</a></h3>
-          <p>4-bit weights <em>and</em> activations for an 8B MoE on a 16 GB RTX 5070 Ti — custom vLLM CUTLASS SM120 source build, 102.6 tok/s single-stream / 407 tok/s batch-8, budget-forced reasoning evals.</p>
+          <p>4-bit weights <em>and</em> activations for an 8B MoE on a 16 GB RTX 5070 Ti — custom vLLM CUTLASS SM120 source build, 9.5 tok/s single-stream / ~74 tok/s batch-8 (<code>enforce_eager</code> — an earlier 102.6/407 tok/s figure measured under CUDA graphs was retracted 2026-08-14; CUDA graph capture corrupts output on this card), budget-forced reasoning evals.</p>
         </div>
         <div class="focus-card">
           <h3><a href="https://github.com/t-timms/bible-ai-assistant">Bible AI Assistant</a></h3>
