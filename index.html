@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tremayne Timms — ML &amp; AI Engineer</title>
-  <meta name="description" content="Tremayne Timms — ML & AI Engineer. Fine-tuning, agentic systems, edge deployment, and production LLM ops. Blackwell-native NVFP4 quantization, MoE fine-tuning, multi-agent coding agents." />
+  <title>Tremayne Timms — ML Engineer</title>
+  <meta name="description" content="Tremayne Timms — ML Engineer. LLM quantization and inference on consumer hardware: Blackwell-native NVFP4 quantization, MoE pruning, agentic coding benchmarks." />
   <meta name="author" content="Tremayne Timms" />
 
   <!-- Open Graph / social -->
-  <meta property="og:title" content="Tremayne Timms — ML & AI Engineer" />
-  <meta property="og:description" content="Fine-tuning · Agentic Systems · Edge Deployment · Production LLM Ops" />
+  <meta property="og:title" content="Tremayne Timms — ML Engineer" />
+  <meta property="og:description" content="LLM quantization & inference on consumer hardware" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://t-timms.github.io/" />
 
@@ -223,7 +223,7 @@
   <header class="hero">
     <div class="wrap">
       <h1>Tremayne Timms</h1>
-      <p class="role"><span class="accent">ML &amp; AI Engineer</span> — Fine-Tuning · Agentic Systems · Edge Deployment · Production LLM Ops</p>
+      <p class="role"><span class="accent">ML Engineer</span> — LLM quantization &amp; inference on consumer hardware</p>
       <p class="loc">Dallas–Fort Worth, TX</p>
       <div class="links">
         <a class="btn primary" href="https://github.com/t-timms">GitHub</a>
@@ -236,14 +236,13 @@
   <section class="about" id="about">
     <div class="wrap">
       <h2>About</h2>
-      <p>I build production LLM systems from the metal up — from quantized models running on Jetson edge hardware to multi-agent cloud deployments with tool-use, permission gating, and audit trails. Currently focused on MoE fine-tuning, Blackwell-native FP4 quantization (NVFP4), and agentic coding benchmarks (SWE-bench).</p>
+      <p>I quantize and serve large models on hardware that isn't supposed to run them — 16 GB Blackwell GPUs, Jetson edge boards — and I reproduce every published number against its confidence interval before I call it done.</p>
     </div>
   </section>
 
   <section id="focus">
     <div class="wrap">
-      <h2>Current Focus</h2>
-      <p class="lead">Where my deep work is going right now.</p>
+      <h2>Projects</h2>
       <div class="focus-grid">
         <div class="focus-card">
           <h3><a href="https://github.com/t-timms/moe-pruning-nvfp4">MoE Pruning + NVFP4 (KAT-Coder-V2.5)</a></h3>
@@ -261,54 +260,23 @@
           <h3><a href="https://github.com/t-timms/sovereign-edge">Sovereign Edge</a></h3>
           <p>Autonomous multi-agent personal intelligence on NVIDIA Jetson Orin Nano — 5 LangGraph expert agents, LiteLLM gateway, 3-tier ONNX intent router. Fully on-device, zero cloud dependencies. 415 tests.</p>
         </div>
-        <div class="focus-card">
-          <h3><a href="https://github.com/t-timms/bible-ai-assistant">Bible AI Assistant</a></h3>
-          <p>Qwen3.5-4B fine-tuned with ORPO for biblical Q&amp;A — hybrid RAG (ChromaDB + BM25 + cross-encoder reranking), constitutional AI guardrails, and a Whisper + Kokoro voice pipeline behind a Gradio UI. 183 tests, 34 W&amp;B runs.</p>
-        </div>
       </div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="wrap">
-      <h2>More Projects</h2>
-      <ul class="oss">
-        <li><b><a href="https://github.com/t-timms/manna-trading">Manna Trading</a></b> — <span>Multi-agent algorithmic trading pipeline with DeepSeek R1 reasoning at every stage (TA → Chief → Risk → Execution), Kelly Criterion sizing, Monte Carlo risk simulation.</span></li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="oss">
-    <div class="wrap">
-      <h2>Open Source</h2>
-      <p class="lead">Upstream contributions on cutting-edge inference hardware.</p>
-      <ul class="oss">
-        <li><b><a href="https://github.com/ggml-org/llama.cpp/pull/22897">llama.cpp #22897</a></b> — <span>fixes a <code>llama-quantize</code> crash on NVFP4 and adds MSE-optimal scale tensor emission. Open, not yet reviewed — maintainers have signaled full NVFP4 quantization support is out of scope for the project for now.</span></li>
-        <li><b><a href="https://github.com/ggml-org/llama.cpp/pull/22858">llama.cpp #22858</a></b> — <span>earlier, partial version of the same fix (closed, superseded by #22897).</span></li>
+      <ul class="oss" style="margin-top:16px">
+        <li><span>Also: <a href="https://github.com/t-timms/bible-ai-assistant">Bible AI Assistant</a> (ORPO fine-tune + hybrid RAG) · <a href="https://github.com/t-timms/manna-trading">Manna Trading</a> (multi-agent trading pipeline) · an <a href="https://github.com/ggml-org/llama.cpp/pull/22897">open llama.cpp PR</a> fixing an NVFP4 quantizer crash</span></li>
       </ul>
     </div>
   </section>
 
   <section id="skills">
     <div class="wrap">
-      <h2>Skills</h2>
-      <p class="lead">From kernels to multi-agent orchestration.</p>
-      <div class="skills-grid">
-        <div class="skill-row"><div class="area">LLMs &amp; Agents</div><div class="tech">LiteLLM, 200+ providers, Ollama, llama.cpp, multi-agent orchestration, ReAct loops</div></div>
-        <div class="skill-row"><div class="area">Fine-Tuning</div><div class="tech">Unsloth, TRL (SFT/DPO/GRPO/ORPO), QLoRA, PEFT, MoE architectures, RLHF/RLAIF</div></div>
-        <div class="skill-row"><div class="area">Inference</div><div class="tech">vLLM (custom CUTLASS builds), llama.cpp, n-gram speculative decoding (2.2× validated)</div></div>
-        <div class="skill-row"><div class="area">Quantization</div><div class="tech">NVFP4 (Blackwell-native), GGUF, EXL2, FP8, NF4, GPTQ, AWQ</div></div>
-        <div class="skill-row"><div class="area">ML Infrastructure</div><div class="tech">PyTorch, CUDA 12.8, torch.compile, DeepSpeed, lm-eval, W&amp;B, MLflow</div></div>
-        <div class="skill-row"><div class="area">Systems</div><div class="tech">Python, Rust, TypeScript, Docker, GitHub Actions CI/CD, systemd</div></div>
-        <div class="skill-row"><div class="area">Edge / Hardware</div><div class="tech">NVIDIA Jetson Orin Nano, RTX 5070 Ti (Blackwell sm_120), 16 GB VRAM optimization</div></div>
-        <div class="skill-row"><div class="area">Data</div><div class="tech">PostgreSQL, SQL, pandas, SQLAlchemy, ChromaDB, LanceDB, BM25</div></div>
-      </div>
+      <h2>Stack</h2>
+      <p style="color:var(--text-dim); font-size:0.95rem; margin:0;">Python · PyTorch · vLLM / CUTLASS · TRL / Unsloth · NVFP4 · GGUF · GPTQ / AWQ · CUDA · Docker</p>
     </div>
   </section>
 
   <footer>
     <div class="wrap">
-      <div><b>Tremayne Timms</b> — ML &amp; AI Engineer · Dallas–Fort Worth, TX</div>
+      <div><b>Tremayne Timms</b> — ML Engineer · Dallas–Fort Worth, TX</div>
       <div class="links">
         <a class="btn" href="https://github.com/t-timms">GitHub</a>
         <a class="btn" href="https://www.linkedin.com/in/tremayne-t-/">LinkedIn</a>
