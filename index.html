@@ -143,52 +143,6 @@
     .focus-card h3 { margin: 0 0 6px; font-size: 1.05rem; }
     .focus-card p { margin: 0; color: var(--text-dim); font-size: 0.94rem; }
 
-    /* ---- Project cards ---- */
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 16px;
-    }
-    .card {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 20px;
-      background: var(--bg-card);
-      display: flex;
-      flex-direction: column;
-      transition: border-color .15s ease, transform .15s ease;
-    }
-    .card:hover { border-color: var(--accent); transform: translateY(-2px); }
-    .card h3 { margin: 0 0 8px; font-size: 1.08rem; }
-    .card h3 a { color: var(--text); }
-    .card h3 a:hover { color: var(--accent); }
-    .card p { margin: 0 0 14px; color: var(--text-dim); font-size: 0.92rem; flex: 1; }
-    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
-    .tag {
-      font-size: 0.72rem;
-      padding: 3px 9px;
-      border-radius: 999px;
-      background: var(--bg-soft);
-      border: 1px solid var(--border-soft);
-      color: var(--text-dim);
-    }
-    .tag.hl { color: var(--accent); border-color: rgba(47,128,237,0.4); }
-
-    /* ---- Skills ---- */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 14px;
-    }
-    .skill-row {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 14px 16px;
-      background: var(--bg-card);
-    }
-    .skill-row .area { font-weight: 600; font-size: 0.92rem; margin-bottom: 4px; }
-    .skill-row .tech { color: var(--text-dim); font-size: 0.86rem; }
-
     /* ---- OSS ---- */
     .oss { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
     .oss li {
@@ -250,7 +204,7 @@
         </div>
         <div class="focus-card">
           <h3><a href="https://github.com/t-timms/zaya1-godspeed">ZAYA1 NVFP4 W4A4 on Blackwell</a></h3>
-          <p>4-bit weights <em>and</em> activations for an 8B MoE on a 16 GB RTX 5070 Ti, custom vLLM CUTLASS SM120 source build. <strong>HumanEval 72.6% pass@1</strong> (95% CI [65.3, 78.8]) from a 6.02 GB checkpoint, matching or beating published full-precision results for Qwen 3 7B and Llama 3 8B, and apparently the first HumanEval figure for this model at any precision. 9.5 tok/s single-stream / ~74 tok/s batch-8. Also quantified the reasoning/latency tradeoff: disabling the reasoning trace is ~8.5x faster but costs 17 to 29 accuracy points.</p>
+          <p>4-bit weights <em>and</em> activations for an 8B MoE on a 16 GB RTX 5070 Ti, custom vLLM CUTLASS SM120 source build. <strong>HumanEval 72.6% pass@1</strong> (95% CI [65.3, 78.8]) from a 6.02 GB checkpoint, matching or beating published full-precision results for Qwen 3 7B and Llama 3 8B, and apparently the first HumanEval figure for this model at any precision. 9.5 tok/s single-stream / ~74 tok/s batch-8. Also quantified the reasoning/latency tradeoff: disabling the reasoning trace is ~8.5x faster but costs 17 to 29 accuracy points. <strong>2,100+ downloads</strong> on <a href="https://huggingface.co/Ttimms/zaya1-8b-nvfp4-w4a4">Hugging Face</a>.</p>
         </div>
         <div class="focus-card">
           <h3><a href="https://github.com/t-timms/godspeed-coding-agent">Godspeed Coding Agent</a></h3>
