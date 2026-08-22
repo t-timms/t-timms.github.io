@@ -246,16 +246,24 @@
       <p class="lead">Where my deep work is going right now.</p>
       <div class="focus-grid">
         <div class="focus-card">
+          <h3><a href="https://github.com/t-timms/moe-pruning-nvfp4">MoE Pruning + NVFP4 (KAT-Coder-V2.5)</a></h3>
+          <p>Serving a 50%-expert-pruned MoE coder model on a 16 GB consumer Blackwell GPU — REAP structured pruning + NVFP4A16 quantization, published on <a href="https://huggingface.co/Ttimms/KAT-Coder-V2.5-Dev-REAP-50-NVFP4A16">Hugging Face</a>. <strong>SWE-bench Verified 52.0%</strong> (26/50, officially graded), HumanEval+ 90.9% / MBPP+ 89.9% reproduced on the shipped weights inside published confidence intervals, lossless sharding verified via SHA-256 across all 47,013 tensors. CI-checked reproduction pipeline.</p>
+        </div>
+        <div class="focus-card">
           <h3><a href="https://github.com/t-timms/zaya1-godspeed">ZAYA1 NVFP4 W4A4 on Blackwell</a></h3>
           <p>4-bit weights <em>and</em> activations for an 8B MoE on a 16 GB RTX 5070 Ti, custom vLLM CUTLASS SM120 source build. <strong>HumanEval 72.6% pass@1</strong> (95% CI [65.3, 78.8]) from a 6.02 GB checkpoint, matching or beating published full-precision results for Qwen 3 7B and Llama 3 8B, and apparently the first HumanEval figure for this model at any precision. 9.5 tok/s single-stream / ~74 tok/s batch-8. Also quantified the reasoning/latency tradeoff: disabling the reasoning trace is ~8.5x faster but costs 17 to 29 accuracy points.</p>
         </div>
         <div class="focus-card">
-          <h3><a href="https://github.com/t-timms/bible-ai-assistant">Bible AI Assistant</a></h3>
-          <p>Qwen3.5-4B fine-tuned with ORPO for biblical Q&amp;A — hybrid RAG (ChromaDB + BM25 + cross-encoder reranking), constitutional AI guardrails, and a Whisper + Kokoro voice pipeline behind a Gradio UI. 183 tests, 34 W&amp;B runs.</p>
+          <h3><a href="https://github.com/t-timms/godspeed-coding-agent">Godspeed Coding Agent</a></h3>
+          <p>Security-first coding agent — async ReAct loop, 4-tier deny-first permission engine, SHA-256 hash-chained audit trail, 200+ LLM providers via LiteLLM. SWE-bench Lite (dev-23 split): 34.8% single-shot · 52.2% oracle best-of-5, free-tier drivers, $0 API spend.</p>
         </div>
         <div class="focus-card">
           <h3><a href="https://github.com/t-timms/sovereign-edge">Sovereign Edge</a></h3>
           <p>Autonomous multi-agent personal intelligence on NVIDIA Jetson Orin Nano — 5 LangGraph expert agents, LiteLLM gateway, 3-tier ONNX intent router. Fully on-device, zero cloud dependencies. 415 tests.</p>
+        </div>
+        <div class="focus-card">
+          <h3><a href="https://github.com/t-timms/bible-ai-assistant">Bible AI Assistant</a></h3>
+          <p>Qwen3.5-4B fine-tuned with ORPO for biblical Q&amp;A — hybrid RAG (ChromaDB + BM25 + cross-encoder reranking), constitutional AI guardrails, and a Whisper + Kokoro voice pipeline behind a Gradio UI. 183 tests, 34 W&amp;B runs.</p>
         </div>
       </div>
     </div>
@@ -263,53 +271,10 @@
 
   <section id="projects">
     <div class="wrap">
-      <h2>Projects</h2>
-      <p class="lead">Production-grade systems — every one tested, documented, and shipped.</p>
-      <div class="projects">
-
-        <div class="card">
-          <h3><a href="https://github.com/t-timms/godspeed-coding-agent">Godspeed Coding Agent</a></h3>
-          <p>Security-first coding agent. Async ReAct loop with a 4-tier deny-first permission engine, SHA-256 hash-chained audit trail, and 200+ LLM providers via LiteLLM. SWE-bench Lite (dev-23 split): 34.8% single-shot · 52.2% oracle best-of-5, free-tier drivers.</p>
-          <div class="tags"><span class="tag hl">4,600+ tests</span><span class="tag">MCP</span><span class="tag">LiteLLM</span><span class="tag">GRPO export</span></div>
-        </div>
-
-        <div class="card">
-          <h3><a href="https://github.com/t-timms/manna-trading">Manna Trading</a></h3>
-          <p>Multi-agent algorithmic trading pipeline with DeepSeek R1 reasoning at every stage. 4-agent pipeline (TA → Chief → Risk → Execution), Kelly Criterion sizing, Monte Carlo risk, real-time WebSocket data.</p>
-          <div class="tags"><span class="tag">DeepSeek R1</span><span class="tag">Multi-agent</span><span class="tag">WebSocket</span></div>
-        </div>
-
-        <div class="card">
-          <h3><a href="https://github.com/t-timms/gpu-server-test-suite">GPU Server Test Suite</a></h3>
-          <p>Comprehensive GPU fleet validation modeled on NVIDIA DCGM. 16 diagnostic modules, Prometheus + Grafana, fault injection, JUnit XML for CI.</p>
-          <div class="tags"><span class="tag hl">188 tests</span><span class="tag">Prometheus</span><span class="tag">Grafana</span></div>
-        </div>
-
-        <div class="card">
-          <h3><a href="https://github.com/t-timms/ml-lab">ML Lab</a></h3>
-          <p>ML research control plane — experiment lifecycle management, model registry, and cloud training launcher. Orchestrates preflight checks and knowledge persistence across the stack.</p>
-          <div class="tags"><span class="tag hl">49 tests</span><span class="tag">v0.1.0</span><span class="tag">MLOps</span></div>
-        </div>
-
-        <div class="card">
-          <h3><a href="https://github.com/t-timms/llm-wiki">LLM Wiki</a></h3>
-          <p>Git-backed knowledge base on Karpathy's LLM Wiki pattern. LangGraph ingest/query pipelines, instructor + Pydantic structured output, BM25 search, Groq → Gemini → Ollama fallback.</p>
-          <div class="tags"><span class="tag hl">117 tests</span><span class="tag">LangGraph</span><span class="tag">Pydantic</span></div>
-        </div>
-
-        <div class="card">
-          <h3><a href="https://github.com/t-timms/manufacturing-quality-analytics">Manufacturing Quality Analytics</a></h3>
-          <p>SQL + Python ETL pipeline for semiconductor quality analysis — supplier performance scoring, defect Pareto distributions, and yield trend analysis.</p>
-          <div class="tags"><span class="tag">SQL</span><span class="tag">ETL</span><span class="tag">pandas</span></div>
-        </div>
-
-        <div class="card">
-          <h3><a href="https://github.com/t-timms/tesla-tire-wear-ml">Tesla Tire Wear ML</a></h3>
-          <p>Multi-model ML pipeline for Tesla tire wear prediction. Random Forest, XGBoost, and Neural Network ensemble with Claude AI integration.</p>
-          <div class="tags"><span class="tag">XGBoost</span><span class="tag">Ensemble</span><span class="tag">scikit-learn</span></div>
-        </div>
-
-      </div>
+      <h2>More Projects</h2>
+      <ul class="oss">
+        <li><b><a href="https://github.com/t-timms/manna-trading">Manna Trading</a></b> — <span>Multi-agent algorithmic trading pipeline with DeepSeek R1 reasoning at every stage (TA → Chief → Risk → Execution), Kelly Criterion sizing, Monte Carlo risk simulation.</span></li>
+      </ul>
     </div>
   </section>
 
@@ -318,8 +283,8 @@
       <h2>Open Source</h2>
       <p class="lead">Upstream contributions on cutting-edge inference hardware.</p>
       <ul class="oss">
-        <li><b><a href="https://github.com/ggml-org/llama.cpp/pull/22897">llama.cpp #22897</a></b> — <span>NVFP4 default type mapping + per-tensor scale tensors + MSE-optimal correction.</span></li>
-        <li><b><a href="https://github.com/ggml-org/llama.cpp/pull/22858">llama.cpp #22858</a></b> — <span>Missing <code>LLAMA_FTYPE_MOSTLY_NVFP4</code> case fix (closed, replaced by #22897).</span></li>
+        <li><b><a href="https://github.com/ggml-org/llama.cpp/pull/22897">llama.cpp #22897</a></b> — <span>fixes a <code>llama-quantize</code> crash on NVFP4 and adds MSE-optimal scale tensor emission. Open, not yet reviewed — maintainers have signaled full NVFP4 quantization support is out of scope for the project for now.</span></li>
+        <li><b><a href="https://github.com/ggml-org/llama.cpp/pull/22858">llama.cpp #22858</a></b> — <span>earlier, partial version of the same fix (closed, superseded by #22897).</span></li>
       </ul>
     </div>
   </section>
@@ -331,7 +296,7 @@
       <div class="skills-grid">
         <div class="skill-row"><div class="area">LLMs &amp; Agents</div><div class="tech">LiteLLM, 200+ providers, Ollama, llama.cpp, multi-agent orchestration, ReAct loops</div></div>
         <div class="skill-row"><div class="area">Fine-Tuning</div><div class="tech">Unsloth, TRL (SFT/DPO/GRPO/ORPO), QLoRA, PEFT, MoE architectures, RLHF/RLAIF</div></div>
-        <div class="skill-row"><div class="area">Inference</div><div class="tech">vLLM (custom forks), speculative decoding (750 tok/s), TensorRT-LLM, EXL2</div></div>
+        <div class="skill-row"><div class="area">Inference</div><div class="tech">vLLM (custom CUTLASS builds), llama.cpp, n-gram speculative decoding (2.2× validated)</div></div>
         <div class="skill-row"><div class="area">Quantization</div><div class="tech">NVFP4 (Blackwell-native), GGUF, EXL2, FP8, NF4, GPTQ, AWQ</div></div>
         <div class="skill-row"><div class="area">ML Infrastructure</div><div class="tech">PyTorch, CUDA 12.8, torch.compile, DeepSpeed, lm-eval, W&amp;B, MLflow</div></div>
         <div class="skill-row"><div class="area">Systems</div><div class="tech">Python, Rust, TypeScript, Docker, GitHub Actions CI/CD, systemd</div></div>
